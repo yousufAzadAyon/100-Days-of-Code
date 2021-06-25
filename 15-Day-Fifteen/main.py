@@ -24,7 +24,7 @@ MENU = {
     }
 }
 
-
+# profit for each session
 profit = 0
 resources = {
     "water": 300,
