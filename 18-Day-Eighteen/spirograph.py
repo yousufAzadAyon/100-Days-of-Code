@@ -4,6 +4,7 @@ from random import randint
 tim = Turtle()
 tim.shape("arrow")
 colormode(255)
+tim.hideturtle()
 
 def random_color():
     r = randint(0,255)
