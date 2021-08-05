@@ -2,6 +2,7 @@ from turtle import Turtle, Screen, colormode
 from random import choice, randint
 
 tim = Turtle()
+tim.shape("arrow")
 colormode(255)
 
 def random_color():
@@ -11,14 +12,18 @@ def random_color():
     color = (r,g,b)
     return color
 
-directions = [0,90,180,270]
-tim.pensize(10)
-tim.speed("fast")
 
-for _ in range(500):
-    tim.color(random_color())
-    tim.fd(20)
-    tim.setheading(choice(directions))
+tim.speed("fastest")
+
+
+def draw_sporograph(gap_size):
+    for _ in range(int(360 / gap_size)):
+        tim.color(random_color())
+        tim.circle(100)
+        tim.setheading(tim.heading() + gap_size)
+
+
+draw_sporograph(5)
 
 screen = Screen()
 screen.exitonclick()
